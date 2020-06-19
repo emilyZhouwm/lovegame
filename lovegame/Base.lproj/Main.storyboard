@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpC-ug-ku3">
+                                <rect key="frame" x="200" y="398" width="80" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="C43-dd-apB"/>
+                                    <constraint firstAttribute="height" constant="44" id="Yif-HF-gOp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="喜欢"/>
+                                <connections>
+                                    <action selector="okButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIc-ZH-NQS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="师父喜不喜欢我？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqn-4R-UgL">
+                                <rect key="frame" x="110" y="155.5" width="155" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEO-bb-fgx">
+                                <rect key="frame" x="100" y="398" width="80" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="N7U-mo-rPW"/>
+                                    <constraint firstAttribute="width" constant="80" id="nxd-El-RRE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="不喜欢"/>
+                                <connections>
+                                    <action selector="noButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="wVb-lU-GpK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bqn-4R-UgL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="3ON-no-AMS"/>
+                            <constraint firstItem="qpC-ug-ku3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="378" id="MLJ-mm-kOu"/>
+                            <constraint firstItem="WEO-bb-fgx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="378" id="Rja-gr-beE"/>
+                            <constraint firstItem="WEO-bb-fgx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="SI0-fP-WpI"/>
+                            <constraint firstItem="bqn-4R-UgL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oqu-Ld-rQw"/>
+                            <constraint firstItem="qpC-ug-ku3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="wtP-MF-YxO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="noBtn" destination="WEO-bb-fgx" id="sT5-8P-Ier"/>
+                        <outlet property="noLeftLayout" destination="SI0-fP-WpI" id="Ai7-OF-ai1"/>
+                        <outlet property="noTopLayout" destination="Rja-gr-beE" id="RRO-bQ-auI"/>
+                        <outlet property="okBtn" destination="qpC-ug-ku3" id="tlv-Mf-PSE"/>
+                        <outlet property="okLeftLayout" destination="wtP-MF-YxO" id="nQw-CF-LVq"/>
+                        <outlet property="okTopLayout" destination="MLJ-mm-kOu" id="jEH-Zy-THs"/>
+                        <outlet property="qLbl" destination="bqn-4R-UgL" id="guo-e4-eRq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
